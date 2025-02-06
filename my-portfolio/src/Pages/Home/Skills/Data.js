@@ -1,13 +1,13 @@
-import html from "./Images/HTML.png"
-import css from "./Images/CSS.png"
-import JS from "./Images/JS.png"
-import React from "./Images/React.png"
-import NodeJs from "./Images/NodeJs.png"
-import Mongo from "./Images/Mongo.png"
-import Redux from "./Images/Redux.png"
-import Illustrator from "./Images/Illustrator.png"
-import VsCode from "./Images/VsCode.png"
-import Tailwind from "./Images/Tailwind.png"
+import html from "../../../assets/Images/Tools/HTML.png"
+import css from "../../../assets/Images/Tools/CSS.png"
+import JS from "../../../assets/Images/Tools/JS.png"
+import React from "../../../assets/Images/Tools/React.png"
+import NodeJs from "../../../assets/Images/Tools/NodeJs.png"
+import Mongo from "../../../assets/Images/Tools/Mongo.png"
+import Redux from "../../../assets/Images/Tools/Redux.png"
+import Illustrator from "../../../assets/Images/Tools/Illustrator.png"
+import VsCode from "../../../assets/Images/Tools/VsCode.png"
+import Tailwind from "../../../assets/Images/Tools/Tailwind.png"
 
 export const progressData = [
   {

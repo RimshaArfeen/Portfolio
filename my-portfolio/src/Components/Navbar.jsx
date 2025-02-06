@@ -1,26 +1,25 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 // border-bottom: 2px solid #d9440
+// text[#d94400]
 const Navbar = () => {
   return (
-     <header class="text-gray-200 body-font absolute w-full top-0 z-20  border-b-2 border-[#d94400]">
-     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-       <a class="flex title-font font-medium items-center text-[#d94400] mb-4 md:mb-0">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+     <header className=" body-font absolute w-full top-0 z-20  border-b-2 border-indigo-600 text-indigo-600 tracking-wider">
+     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+       <a className="flex title-font font-medium items-center text-indigo-600 tracking-wider mb-4 md:mb-0">
+         {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-         </svg>
-         <span class="ml-3 text-xl">Tailblocks</span>
+         </svg> */}
+         <span className="ml-3 text-xl">MERN STACK DEVELOPER</span>
        </a>
-       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-         <a class="mr-5 hover:text-[#d94400] hover:cursor-pointer uppercase ">First Link</a>
-         <a class="mr-5 hover:text-[#d94400] hover:cursor-pointer uppercase ">Second Link</a>
-         <a class="mr-5 hover:text-[#d94400] hover:cursor-pointer uppercase ">Third Link</a>
-         <a class="mr-5 hover:text-[#d94400] hover:cursor-pointer uppercase ">Fourth Link</a>
+       <nav className="md:ml-auto md:mr-auto text-white flex flex-wrap items-center text-base justify-center">
+         <NavLink to="/" className="mr-5 hover:text-indigo-600 tracking-wider hover:cursor-pointer uppercase ">Home</NavLink>
+         <NavLink to="/about" className="mr-5 hover:text-indigo-600 tracking-wider hover:cursor-pointer uppercase ">About</NavLink>
+         <NavLink to="/skills" className="mr-5 hover:text-indigo-600 tracking-wider hover:cursor-pointer uppercase ">Skills</NavLink>
+         <NavLink to="/portfolio" className="mr-5 hover:text-indigo-600 tracking-wider hover:cursor-pointer uppercase ">Portfolio</NavLink>
+         <NavLink to="/contact" className="mr-5 hover:text-indigo-600 tracking-wider hover:cursor-pointer uppercase ">Contact</NavLink>
        </nav>
-       <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-           <path d="M5 12h14M12 5l7 7-7 7"></path>
-         </svg>
-       </button>
+      
      </div>
    </header>
   )

@@ -1,55 +1,58 @@
 import React from 'react';
-
+import Laptop from "../../assets/Images/Laptop.png"
 const About = () => {
   return (
-    <section className="relative top-0 py-16 invert-0 bg-[#010101] h-fit md:h-screen lg:pb-0 lg:w-[90%] mx-auto px-3 md:px-0">
-        {/* Background Video */}
-                     <img src="https://images.unsplash.com/photo-1537498425277-c283d32ef9db?q=80&w=1478&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className=" absolute w-full object-cover z-0 h-auto md:h-screen top-40 lg:top-20 opacity-60 "
-                        
-                     />
-      <div className="container px-5 mx-auto invert-100">
+    <section className="relative top-0 py-24 bg-[#010101] h-fit md:h-screen lg:pb-0 lg:w-[90%] mx-auto px-3 md:px-0">
+      {/* Background Image */}
+      <img src={Laptop} className=" absolute w-full object-cover z-0 h-auto md:h-screen top-40 lg:top-20 opacity-60 "
+
+      />
+      <div className="container top-5 px-5 mx-auto relative z-30">
         <div className="flex flex-wrap md:flex-nowrap items-start gap-10 ">
           {/* Left Section */}
-          <div className="md:w-1/3 w-full flex flex-col">
-            <h2 className="font-semibold text-gray-700 text-5xl uppercase">Who I Am</h2>
+          <div className="md:w-[40%] w-full flex flex-col"
+            data-aos="fade-right">
+            <h2 className="font-semibold text-gray-100 text-5xl uppercase">Who I Am</h2>
             <hr className="bg-amber-600 my-3 w-3/4 h-[2px]" />
 
             {/* Contact Info */}
             <div className="w-full mt-7 space-y-4">
               <div className="flex items-center space-x-4">
-                <span className="bg-indigo-100 text-indigo-500 w-8 h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center">
-                  📧
+                <span className="bg-[#0e0e0e6e]  border-2 border-indigo-600 w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center">
+                  👤
                 </span>
-                <p className="text-gray-900 text-lg">rimshaarfeen61@gmail.com</p>
+                <p className="text-gray-100 text-lg">Rimsha Arfeen</p>
               </div>
 
               <div className="flex items-center space-x-4">
-                <span className="bg-indigo-100 text-indigo-500 w-8 h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center">
-                  📞
+                <span className="bg-[#0e0e0e6e]  border-2 border-indigo-600 w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center">
+                  🎓
                 </span>
-                <p className="text-gray-900 text-lg">0340-4604887</p>
+                <p className="text-gray-100 text-lg">Computer Science Student</p>
               </div>
 
               <div className="flex items-center space-x-4">
-                <span className="bg-indigo-100 text-indigo-500 w-8 h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center">
-                  📍
+                <span className="bg-[#0e0e0e6e]  border-2 border-indigo-600 w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center">
+                  💻
                 </span>
-                <p className="text-gray-900 text-lg">Karachi, Pakistan</p>
+                <p className="text-gray-100 text-lg">React & Frontend Developer</p>
               </div>
             </div>
-          </div>
 
+          </div>
+          <hr className='hidden md:block w-[1px] h-80 text-indigo-600 mx-1 bg-indigo-600' />
           {/* Right Section */}
-          <div className="md:w-2/3 w-full pr-3">
-            <h2 className="text-3xl font-semibold uppercase tracking-wide text-gray-900 mb-4">
+          <div className="md:w-2/3 w-full pr-3"
+            data-aos="fade-left">
+            <h2 className="text-3xl font-light uppercase tracking-wider text-indigo-600 mb-4">
               Transforming Ideas into Digital Experiences
             </h2>
-            <p className="leading-relaxed text-lg text-gray-700 text-justify">
-              I'm <span className="font-bold text-gray-950">Rimsha Arfeen</span>, a passionate
-              <span className="font-bold text-gray-950"> Web Developer</span> dedicated to
+            <p className="leading-relaxed text-lg text-gray-100 text-justify">
+              I'm <span className="font-bold text-gray-150">Rimsha Arfeen</span>, a passionate
+              <span className="font-bold text-gray-150"> Web Developer</span> dedicated to
               building dynamic, responsive, and user-centric web applications.
-              With expertise in <span className="font-bold text-gray-950">React, Redux, Tailwind
-              CSS, and modern web technologies</span>, I focus on crafting seamless digital
+              With expertise in <span className="font-bold text-gray-150">React, Redux, Tailwind
+                CSS, and modern web technologies</span>, I focus on crafting seamless digital
               experiences that bring ideas to life. Whether it's designing interactive interfaces
               or optimizing performance, I thrive on problem-solving and innovation.
             </p>
