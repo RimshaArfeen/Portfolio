@@ -56,12 +56,17 @@ export const services = [
     description: "Building scalable and secure RESTful APIs with Node.js, Express, and MongoDB. Implementing authentication, databases, and backend logic.",
     iconPath: "M22 12h-4l-3 9L9 3l-3 9H2"
   },
+  // {
+  //   title: "UI/UX Design",
+  //   description: "Crafting user-friendly and visually appealing interfaces using Figma and Adobe XD. Ensuring accessibility and seamless user experience.",
+  //   iconPath: "M3 10h11l3-8h4"
+  // },
   {
-    title: "UI/UX Design",
-    description: "Crafting user-friendly and visually appealing interfaces using Figma and Adobe XD. Ensuring accessibility and seamless user experience.",
-    iconPath: "M3 10h11l3-8h4"
+    title: "Graphic Designing",
+    description: "Designing captivating visuals and branding materials with tools like Figma and Adobe XD. Focusing on creativity, usability, and aesthetic excellence.",
+    iconPath: "M4 4h16v16H4z" 
   }
- 
+  
 ];
 
 export const techStack = [

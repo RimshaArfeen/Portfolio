@@ -35,7 +35,7 @@ const About = () => {
                 <span className="bg-[#0e0e0e6e]  border-2 border-indigo-600 w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center">
                   💻
                 </span>
-                <p className="text-gray-100 text-lg">React & Frontend Developer</p>
+                <p className="text-gray-100 text-lg">MERN Stack Developer</p>
               </div>
             </div>
 
