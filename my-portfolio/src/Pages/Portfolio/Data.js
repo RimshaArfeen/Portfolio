@@ -10,7 +10,7 @@ import Weather from "../../assets/Images/Portfolio/Weather.png"
 import Ecom from "../../assets/Images/Portfolio/Ecom-dashboard.png"
 import addProd from "../../assets/Images/Portfolio/addProd.png"
 ///
-import crudApp from "../../assets/Images/Portfolio/crudApp.png"
+import crudApp from "../../assets/Images/Portfolio/CrudApp.png"
 import viewUser from "../../assets/Images/Portfolio/viewUser.png"
 ///
 import NestaCoffee from "../../assets/Images/Portfolio/NestaCoffee.png"
