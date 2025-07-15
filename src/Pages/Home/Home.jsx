@@ -37,7 +37,7 @@ const Home = () => {
 
   return (
     <>
-      <section
+       <section
         role="region"
         aria-label="Home Section"
         className="text-gray-100 body-font relative w-full top-0 h-screen"

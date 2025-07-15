@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import { services } from "./Data.js"
 const Services = () => {
   return (
-     <section>
+      <section>
      <h1 class="font-bold uppercase title-font text-2xl mb-6  text-gray-100 tracking-wider border-b-[2px] border-indigo-700">What i can do</h1>
                  <div className="flex flex-wrap w-full">
                    {services.map((item, index) => (

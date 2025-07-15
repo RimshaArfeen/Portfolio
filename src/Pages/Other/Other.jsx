@@ -3,7 +3,7 @@ import { Data } from "./Data.js"; // Assuming the data is correctly imported
 
 const Portfolio = () => {
   return (
-    <section className="body-font mx-auto flex flex-col px-5 xl:w-[90%] py-24 text-gray-100 relative  lg:top-0 h-fit bg-[#010101] z-10">
+     <section className="body-font mx-auto flex flex-col px-5 xl:w-[90%] py-24 text-gray-100 relative  lg:top-0 h-fit bg-[#010101] z-10">
       
       {/* Section Header
       <div className="w-full flex justify-center items-center mb-12">

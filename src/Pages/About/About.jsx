@@ -2,7 +2,7 @@ import React from 'react';
 import Laptop from "../../assets/Images/Laptop.png"
 const About = () => {
   return (
-    <section className="relative top-5 py-24 bg-[#010101] h-fit md:h-screen lg:pb-0 lg:w-[90%] mx-auto px-3 md:px-0">
+     <section className="relative top-5 py-24 bg-[#010101] h-fit md:h-screen lg:pb-0 lg:w-[90%] mx-auto px-3 md:px-0">
       {/* Background Image */}
       <img src={Laptop} className=" absolute w-full object-cover z-0 h-auto md:h-screen top-40 lg:top-20 opacity-60 "
 

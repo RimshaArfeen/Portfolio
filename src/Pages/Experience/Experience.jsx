@@ -3,7 +3,7 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <section className="text-gray-100 pb-24 body-font relative top-[155vh]  md:top-[140vh] lg:top-0  bg-[#010101] h-fit">
+     <section className="text-gray-100 pb-24 body-font relative top-[155vh]  md:top-[140vh] lg:top-0  bg-[#010101] h-fit">
       <div className="px-5 mx-auto flex flex-col lg:px-8">
         <h1 className="font-bold uppercase title-font text-3xl text-gray-100 tracking-wider border-b-2 border-indigo-700 w-fit"
         data-aos="fade-up">

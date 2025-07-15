@@ -38,7 +38,7 @@ const ServiceItem = ({ iconPath, title, description }) => (
 
 const Skills = () => {
   return (
-    <section className="text-gray-100  py-24 body-font relative h-fit bg-[#010101] lg:px-8 px-5">
+     <section className="text-gray-100  py-24 body-font relative h-fit bg-[#010101] lg:px-8 px-5">
       <div className="container mx-auto flex items-start flex-wrap lg:flex-nowrap h-screen py-14">
         
         {/* Skills Section */}

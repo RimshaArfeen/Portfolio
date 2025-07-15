@@ -5,7 +5,7 @@ const ProjectDetail = ({ img, img2, title, description, link, close }) => {
   let navigate = useNavigate();
 
   return (
-    <section className="body-font text-gray-700 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+     <section className="body-font text-gray-700 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="relative mx-auto px-6 w-full md:w-[85%] lg:w-3/4 h-fit bg-white rounded-lg shadow-lg overflow-hidden">
         
         {/* Background Image */}

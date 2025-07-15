@@ -18,7 +18,7 @@ const [selectedCategory, setselectedCategory] = useState("Web")
    }
 
   return (
-    <section className="body-font mx-auto flex flex-wrap px-5 xl:w-[90%] py-24 text-gray-100 relative top-10 lg:top-0 h-fit  bg-[#010101] z-10">
+     <section className="body-font mx-auto flex flex-wrap px-5 xl:w-[90%] py-24 text-gray-100 relative top-10 lg:top-0 h-fit  bg-[#010101] z-10">
       <div className=' w-full flex justify-center items-center ml-2'>
        <div className="w-full lg:w-1/2 uppercase flex justify-between items-center  title-font text-2xl text-gray-100 tracking-wider  text-center mb-14"
         data-aos="fade-up">

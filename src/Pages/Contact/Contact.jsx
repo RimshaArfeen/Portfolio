@@ -3,7 +3,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section className="text-gray-100 body-font relative top-24">
+     <section className="text-gray-100 body-font relative top-24">
       <div className="absolute inset-0 bg-gray-300">
         <iframe
           width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23669.765432155843!2d67.1163632!3d24.9094499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338e02cf4dc85%3A0x8eb0b6c37d200f42!2sHunaid%20City!5e0!3m2!1sen!2sin!4v1678896363567!5m2!1sen!2sin" style={{ filter: "contrast(1.2)", opacity: 0.8 }}></iframe>
