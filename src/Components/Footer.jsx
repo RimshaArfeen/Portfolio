@@ -19,9 +19,7 @@ const Footer = () => {
               </li>
             </nav>
           </div>
-          {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">SUBSCRIBE</h2>
-?          </div> */}
+          
         </div>
       </div>
       <div className="bg-gray-800">
@@ -30,7 +28,7 @@ const Footer = () => {
             <span className="ml-3 text-xl">MERN STACK DEVELOPER</span>
           </a>
           <p className="text-sm text-gray-100 sm:ml-6 sm:mt-0 mt-4">© 2025 RA Creative —
-            <a href="https://twitter.com/yourhandle" rel="noopener noreferrer" className=" ml-1" target="_blank">@yourhandle</a>
+            <a href="https://twitter.com/yourhandle" rel="noopener noreferrer" className=" ml-1" target="_blank"></a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a href="https://www.linkedin.com/in/your-profile" className="text-gray-100">

@@ -10,29 +10,29 @@ import Portfolio from './Pages/Portfolio/Portfolio';
 import Contact from './Pages/Contact/Contact';
 
 function App() {
-  return (
-    <div className='bg-[#010101]'>
-      <Navbar />
-      <Routes>
-        <Route path='/' element = {
-          <>
-          <Home/>
-          <About/>
-          <Skills/>
-          <Experience/>
-          <Portfolio/>
-          <Contact/>
-          </>} />
-        <Route path='/about' element = {<About/>} />
-        <Route path='/skills' element = {<Skills/>} />
-        <Route path='/experience' element = {<Experience/>} />
-        <Route path='/portfolio' element = {<><Portfolio/></>} />
-        <Route path='/contact' element = {<Contact/>} />
+  return(
 
-      </Routes>
-      <Footer />
-    </div>
-  );
+ <div className='bg-indigo-950'>
+  <Navbar />
+  <Routes>
+    <Route path='/' element = {
+      <>
+      <Home/>
+      <About/>
+      <Skills/>
+      <Experience/>
+      <Portfolio/>
+      <Contact/>
+      </>} />
+    <Route path='/about' element = {<About/>} />
+    <Route path='/skills' element = {<Skills/>} />
+    <Route path='/experience' element = {<Experience/>} />
+    <Route path='/portfolio' element = {<><Portfolio/></>} />
+    <Route path='/contact' element = {<Contact/>} />
+  </Routes>
+  <Footer />
+</div>
+  )
 }
 
 export default App;
