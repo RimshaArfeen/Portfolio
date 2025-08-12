@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import portfolio from "./Data.js"; // Assuming the data is correctly imported
+import {portfolio} from "./Data.js"; // Assuming the data is correctly imported
+import {Graphics} from "./Data.js"; // Assuming the data is correctly imported
+
 import ProjectDetail from './ProjectDetail.jsx';
 
 const Portfolio = () => {
@@ -27,11 +29,10 @@ const [selectedCategory, setselectedCategory] = useState("Web")
         </div>
 
       </div>
-{selectedCategory == "Web" && (
+{selectedCategory == "Web" ? (
   <>
       <div 
-      className={`${selectedProject ? "blur-2xl mx-auto  flex flex-wrap w-full" :"mx-auto  flex flex-wrap w-full"}`}
-      data-aos="zoom-in">
+      className={`${selectedProject ? "blur-2xl mx-auto  flex flex-wrap w-full" :"mx-auto  flex flex-wrap w-full"}`}>
         {portfolio.map((item, index) => (
           <div key={index} className="mx-auto md:mx-0 mb-5 w-[80%] px-2 md:w-1/2 lg:w-1/3 ">
             <div className="relative border-2 border-indigo-600
@@ -66,6 +67,33 @@ const [selectedCategory, setselectedCategory] = useState("Web")
       )}
   </>
 
+): (
+    <section className="body-font mx-auto flex flex-col px-5 xl:w-[90%] pb-24 text-gray-100 relative  lg:top-0 h-fit bg-[#010101] z-10">
+      
+      {/* Portfolio Items */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto ">
+        {Graphics.map((item, index) => (
+          <div className=' flex flex-col justify-center items-center'>
+          <div
+            key={index}
+            className="relative border-2 border-indigo-600 overflow-hidden rounded shadow-lg transition-transform duration-300 hover:scale-105"
+          >
+            <img
+              alt={item.title}
+              className="h-auto w-full object-cover object-center"
+              src={item.imgUrl}
+            />
+            
+          </div>
+          <div className=" bg-opacity-50 flex items-center justify-center">
+          <h2 className="title-font text-xl  mt-1  uppercase w-fit font-normal tracking-wider  text-indigo-600 text-center px-4">
+            {item.title}
+          </h2>
+        </div>
+          </div >
+        ))}
+      </div>
+    </section>
 ) }
 
     </section>

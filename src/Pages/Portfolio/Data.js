@@ -4,7 +4,6 @@ import Collections from "../../assets/Images/Portfolio/Collections.png"
 import BestSellers from "../../assets/Images/Portfolio/BestSellers.png"
 //////
 import TwiiterClone from "../../assets/Images/Portfolio/TwiiterClone.png"
-import LandingPgPNG from "../../assets/Images/Portfolio/LandingPgPNG.png"
 import Weather from "../../assets/Images/Portfolio/Weather.png"
 /////
 import Ecom from "../../assets/Images/Portfolio/Ecom-dashboard.png"
@@ -18,7 +17,14 @@ import Varieties from "../../assets/Images/Portfolio/Varieties.png"
 import Freshness from "../../assets/Images/Portfolio/Freshness.png"
 ////
 
-const portfolio = [
+/// Graphic Designing
+import PP from "../../assets/Images/Portfolio/pp.jpeg"
+import Calligraphy from "../../assets/Images/Portfolio/Calligraphy.jpeg"
+import Kaaba from "../../assets/Images/Portfolio/Kaaba.jpeg"
+import Illustration from "../../assets/Images/Portfolio/Illustration.jpeg"
+
+
+export const portfolio = [
   {
     title: "E-Commerce Dashboard",
     imgUrl: Ecom,
@@ -59,15 +65,30 @@ const portfolio = [
     link: "https://github.com/RimshaArfeen/ProductLandingPage/tree/main",
     description: "A fully functional coffee website designed using React and Tailwind CSS. This project includes features such as order placement, order confirmation, cart management, location services, and user profile authentication. All user data is stored in local storage for a seamless experience. The website also follows modern UI/UX design principles, offering a responsive layout, smooth animations, and optimized performance and accessibility."
   }
-  // {
-  //   title: "Landing Page",
-  //   imgUrl: LandingPgPNG,
-  // img2 : ,
-  // link: "",  
-  // description: "A high-converting landing page designed using React and Tailwind CSS. This project focuses on modern UI/UX design principles, featuring an eye-catching hero section, responsive layout, call-to-action buttons, and smooth animations. The landing page is optimized for performance and accessibility, making it ideal for marketing campaigns and product promotions."
-  // }
+ 
 ];
 
 
+export const Graphics = [
+  {
+    "title": "Palestine Poster",
+    "description": "A powerful poster design symbolizing solidarity with Palestine, using bold colors and impactful imagery to convey a strong message.",
+    "imgUrl": PP
+  },
+  {
+    "title": "Arabic Calligraphy",
+    "description": "Intricate Arabic calligraphy artwork that blends traditional script with modern design elements for a visually stunning piece.",
+    "imgUrl": Calligraphy
+  },
+  {
+    "title": "Kaaba Illustration",
+    "description": "A detailed illustration of the Kaaba, capturing its architectural beauty and spiritual significance with precise lines and shading.",
+    "imgUrl": Kaaba
+  },
+  {
+    "title": "Tracing of Image",
+    "description": "Accurate tracing of complex images to create clean, vector-based artwork suitable for various digital and print applications.",
+    "imgUrl": Illustration
+  }
+]
 
-export default portfolio;

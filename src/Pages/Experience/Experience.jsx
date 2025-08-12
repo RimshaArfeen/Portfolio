@@ -23,7 +23,7 @@ const Experience = () => {
                 <div className="w-12 h-1 bg-indigo-500 rounded my-3"></div>
                 <div className="md:w-64 flex-shrink-0 flex flex-col">
                   <span className="font-semibold title-font text-gray-100 uppercase">
-                    Frontend Developer <span className="text-[16px] font-normal text-gray-100 title-font mb-2">(Intern)</span>
+                    Web Developer <span className="text-[16px] font-normal text-gray-100 title-font mb-2">(Intern)</span>
                   </span>
                   <span className="mt-1 text-gray-100 text-base">July 2024 - Oct 2024</span>
                 </div>
@@ -33,7 +33,7 @@ const Experience = () => {
             <div className="sm:w-[74%] sm:pl-8 sm:border-l border-indigo-600 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-left pr-3 lg:pr-8"
             data-aos="fade-left">
               <h2 className="text-2xl font-medium text-gray-100 title-font mb-2 uppercase">
-                Frontend Web Developer 
+                Web Developer 
               </h2>
               <div className="w-48 h-1 bg-indigo-500 rounded my-3"></div>
 
