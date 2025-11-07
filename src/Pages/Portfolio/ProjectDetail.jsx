@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-
 import { useNavigate } from 'react-router-dom';
 
 const ProjectDetail = ({ img, img2, title, description, link, close }) => {

@@ -23,21 +23,21 @@ const About = () => {
 
           <ul className="space-y-6">
             <li className="flex items-start space-x-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800 text-2xl" aria-hidden="true">
+              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800 text-xl" aria-hidden="true">
                 👤
               </span>
               <div>
                 <p className="text-lg text-slate-400 font-medium">Name</p>
-                <p className="text-xl md:text-2xl font-semibold text-slate-200">Rimsha Arfeen</p>
+                <p className="text-xl font-semibold text-slate-200">Rimsha Arfeen</p>
               </div>
             </li>
             <li className="flex items-start space-x-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800 text-2xl" aria-hidden="true">
+              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800  " aria-hidden="true">
                 🎓
               </span>
               <div>
                 <p className="text-lg text-slate-400 font-medium">Education</p>
-                <p className="text-xl md:text-2xl font-semibold text-slate-200">Computer Science Student</p>
+                <p className="text-xl   font-semibold text-slate-200">Computer Science Student</p>
               </div>
             </li>
             <li className="flex items-start space-x-4">
@@ -86,7 +86,7 @@ const About = () => {
             </button>
           </div>
 
-          <div className='text-slate-300 text-lg md:text-xl transition-opacity duration-500'>
+          <div className='text-slate-300 text-lg transition-opacity duration-500'>
             {selectedCat === "Development" ? (
               <p className="text-justify leading-relaxed">
                 I'm <span className="font-bold text-slate-100">Rimsha Arfeen</span>, a passionate and detail-oriented <span className="font-bold text-slate-100">MERN Stack Developer</span> dedicated to creating modern, responsive, and user-focused web applications. I work extensively with <span className="font-bold text-slate-100">MongoDB, Express.js, React.js, and Node.js</span>, focusing on writing clean and reusable code, building scalable REST APIs, and creating dynamic user interfaces. I am currently expanding my knowledge in <span className="font-bold text-slate-100">Next.js</span> and have a basic understanding of <span className="font-bold text-slate-100">Redux, Python</span>, and <span className="font-bold text-slate-100">C language</span>.

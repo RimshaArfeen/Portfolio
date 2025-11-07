@@ -47,7 +47,7 @@ const Contact = () => {
                 📞
               </span>
               <a href="tel:+923404604887" className="text-sm sm:text-base md:text-lg font-light hover:underline transition-all duration-300">
-                +92 340-4604887
+                +92 371-0253935
               </a>
             </div>
           </div>

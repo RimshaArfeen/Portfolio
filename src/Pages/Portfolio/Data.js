@@ -1,4 +1,5 @@
 /////
+import BlogWeb from "../../assets/Images/Portfolio/BlogWeb.png"
 import Clothing from "../../assets/Images/Portfolio/Clothing.png"
 import Collections from "../../assets/Images/Portfolio/Collections.png"
 import BestSellers from "../../assets/Images/Portfolio/BestSellers.png"
@@ -29,6 +30,13 @@ import GISP from "../../assets/Images/Portfolio/GISP.png"
 import AboutGISP from "../../assets/Images/Portfolio/AboutGISP.png"
 
 export const portfolio = [
+   {
+    title: "Full Stack Blog Website - Echo Journal",
+    imgUrl: BlogWeb,
+    link: "https://blog-app-puce-eight.vercel.app/",
+      description: "Echo Journal is a modern platform where technology, career growth, and innovation come together. Built with the latest web technologies, it offers a smooth, interactive experience for readers and writers alike.\nKey Features:\nDynamic blog pages with real-time updates\nRich text editing powered by TipTap\nCategorized content for easy navigation\nUser comments and author profiles\nAutomatic date formatting and view counter.\nDark mode for a comfortable reading experience\nTech Stack: Next.js | MongoDB | Prisma | Vercel\nExplore, learn, and share ideas with Echo Journal — where every line of code echoes innovation."
+
+  },
   {
     title: "Scholarship Management System",
     imgUrl: GISP,
@@ -37,6 +45,13 @@ export const portfolio = [
       description: "The Abroad Scholarship Management System is a FULL-STACK web application designed to streamline the process of applying for international IT scholarships. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), this system allows students to submit their applications and academic records for evaluation.\nFUNCTIONS:\n ----------\n STUDENT APPLICATION FORM: Collects personal and academic details, validates eligibility (≥85% marks, age ≥19).\n\nSELECTION OPTIONS:\n----------\n  University-first: Faculty assigned based on chosen university and academic record.\n  Faculty-first: Checks available seats for chosen faculty across universities.\n\nDatabase Management: Stores applications, updates seat availability dynamically.\n\nAuthentication: Secure admin login with JWT, protected routes for data management.\n\nAdmin Dashboard: View, filter, and manage applications; monitor seat availability.\n\nPages\nHome – Overview of scholarships.\nApply – Scholarship application form.\nAdmin Dashboard – Manage applications, view seat availability.\nLogin – Admin authentication page.\n\nTech Stack\nFrontend: React.js, Tailwind CSS\nBackend: Node.js, Express.js\nDatabase: MongoDB (Mongoose)\nAuth: JWT"
 
   },
+  {
+  title: "Nesta Coffee",
+    imgUrl: NestaCoffee,
+      img2 : Varieties,
+        link: "https://product-landing-page-three-flax.vercel.app/",
+          description: "A fully functional coffee website designed using React and Tailwind CSS. This project includes features such as order placement, order confirmation, cart management, location services, and user profile authentication. All user data is stored in local storage for a seamless experience. The website also follows modern UI/UX design principles, offering a responsive layout, smooth animations, and optimized performance and accessibility."
+},
 {
   title: "E-Commerce Dashboard",
     imgUrl: Ecom,
@@ -70,13 +85,7 @@ export const portfolio = [
       link: "",
         description: "A Twitter clone built using React and Tailwind CSS, featuring a fully responsive design and interactive UI. Users can post tweets, like posts, and view a live feed of content. The project showcases key social media functionalities, including user authentication, posting capabilities, and real-time updates."
 },
-{
-  title: "Nesta Coffee",
-    imgUrl: NestaCoffee,
-      img2 : Varieties,
-        link: "https://github.com/RimshaArfeen/ProductLandingPage/tree/main",
-          description: "A fully functional coffee website designed using React and Tailwind CSS. This project includes features such as order placement, order confirmation, cart management, location services, and user profile authentication. All user data is stored in local storage for a seamless experience. The website also follows modern UI/UX design principles, offering a responsive layout, smooth animations, and optimized performance and accessibility."
-}
+
  
 ];
 
