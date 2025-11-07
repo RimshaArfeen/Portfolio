@@ -1,5 +1,6 @@
 /////
 import BlogWeb from "../../assets/Images/Portfolio/BlogWeb.png"
+import EcommerceWeb from "../../assets/Images/Portfolio/EcommerceWeb.png"
 import Clothing from "../../assets/Images/Portfolio/Clothing.png"
 import Collections from "../../assets/Images/Portfolio/Collections.png"
 import BestSellers from "../../assets/Images/Portfolio/BestSellers.png"
@@ -43,6 +44,14 @@ export const portfolio = [
     img2: AboutGISP,
     link: "#",
       description: "The Abroad Scholarship Management System is a FULL-STACK web application designed to streamline the process of applying for international IT scholarships. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), this system allows students to submit their applications and academic records for evaluation.\nFUNCTIONS:\n ----------\n STUDENT APPLICATION FORM: Collects personal and academic details, validates eligibility (≥85% marks, age ≥19).\n\nSELECTION OPTIONS:\n----------\n  University-first: Faculty assigned based on chosen university and academic record.\n  Faculty-first: Checks available seats for chosen faculty across universities.\n\nDatabase Management: Stores applications, updates seat availability dynamically.\n\nAuthentication: Secure admin login with JWT, protected routes for data management.\n\nAdmin Dashboard: View, filter, and manage applications; monitor seat availability.\n\nPages\nHome – Overview of scholarships.\nApply – Scholarship application form.\nAdmin Dashboard – Manage applications, view seat availability.\nLogin – Admin authentication page.\n\nTech Stack\nFrontend: React.js, Tailwind CSS\nBackend: Node.js, Express.js\nDatabase: MongoDB (Mongoose)\nAuth: JWT"
+
+  },
+   {
+    title: "Full Stack Ecommerce Website - SpicyBazaar (In progress)",
+    imgUrl: EcommerceWeb,
+    img2: EcommerceWeb,
+    link: "https://ecommerce-website-black-mu.vercel.app/",
+      description: "Spicy Bazaar – Your Ultimate Online Food Marketplace\nSpicy Bazaar is a modern, full-stack e-commerce food delivery platform designed to bring your favorite meals and local restaurants right to your door. Built with Next.js (App Router), React, and TailwindCSS, it delivers a fast, seamless, and mobile-first experience that feels as flavorful as its name.\nKey Features\n*User Authentication & Profiles – Secure signup/login, saved addresses, and complete order history\n*Restaurant & Vendor Listings – Explore nearby restaurants with menus, ratings, and location info\n*Dynamic Menu Catalogue – Filter dishes by cuisine, price, or rating to find exactly what you crave\n*Smart Cart System – Add, remove, or edit quantities easily with real-time updates.\n*Smooth Checkout Flow – Choose addresses, apply promo codes, and complete payments effortlessly.\n*Integrated Payments – Supports card and wallet payments for quick, safe transactions.\n*Order Tracking – View live order status from “preparing” to “delivered” with real-time map updates.\n*Admin & Vendor Dashboard – Manage restaurants, menus, visuals, and orders through a powerful back-office.\n*Fully Responsive Design – Optimized for all screens with accessible and intuitive UI.\n⚙️ Tech Stac\n*Frontend: Next.js (App Router) + React + TailwindCSS\n*Database: MongoDB Atlas\n*ORM: Prisma (for type-safe data handling)\n*Deployment: Verc\nSpicy Bazaar blends elegant design, smooth performance, and real-time functionality—creating a digital food marketplace that’s as bold and vibrant as your favorite spices."
 
   },
   {
