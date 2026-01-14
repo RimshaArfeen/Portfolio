@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 # My Portfolio
 
-Welcome to my portfolio! This repository showcases my projects, skills, and creative works. I specialize in the MERN stack, Redux, and various frontend/backend technologies. Below is an overview of my work.
+Welcome to my portfolio! This repository showcases my projects, skills, and creative works. I specialize in the Full Stack, Redux, and various frontend/backend technologies. Below is an overview of my work.
 
 ---
 
 ## 📂 Projects
 
-### 1. **EcomDashboard (MERN Stack)**  
+### 1. **EcomDashboard (Full Stack)**  
    - Full e-commerce dashboard with user auth, product management, and analytics.  
    - **Tech**: MongoDB, Express.js, React, Node.js, Redux, Tailwind CSS.  
    - [[GitHub Link](https://github.com/RimshaArfeen/Ecom-Dashboard)]

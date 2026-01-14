@@ -1,71 +1,95 @@
-import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { FiMenu, FiX } from 'react-icons/fi'; // for icons
+
+"use client"
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { Send, Briefcase, ChevronRight, Menu, X } from 'lucide-react';
+
 
 const Navbar = () => {
-  const [scroll, setScroll] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Skills', href: '/skills' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
-    <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ease-in-out ${
-        scroll ? 'bg-gray-950/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-      }`}
+    <nav
+      className={`fixed w-full top-0 left-0 z-50 transition-all duration-500 ${isScrolled ? 'py-3' : 'py-6'
+        }`}
     >
-      <div className="container mx-auto flex items-center justify-between p-4 md:p-5">
-        <NavLink
-          to="/"
-          className="flex items-center text-indigo-400 font-bold text-2xl uppercase tracking-widest"
-        >
-          <span className="text-3xl text-indigo-600 font-extrabold">RA</span>
-        </NavLink>
+      <div className="container mx-auto px-6 lg:px-24">
+        <div className={`relative flex items-center justify-between transition-all duration-500 rounded-2xl px-6 py-2 ${isScrolled
+            ? 'bg-slate-900/60 backdrop-blur-xl border border-slate-800/50 shadow-2xl'
+            : 'bg-transparent border border-transparent'
+          }`}>
+          {/* Logo */}
+          <a href="#" className="group flex items-center gap-2">
+            <div className="relative flex items-center justify-center w-10 h-10 bg-indigo-600 rounded-lg group-hover:rotate-[360deg] transition-transform duration-700">
+              <span className="text-white font-black text-xl">R</span>
+              <div className="absolute inset-0 bg-indigo-400 blur-md opacity-0 group-hover:opacity-40 transition-opacity" />
+            </div>
+            <span className="text-white font-bold tracking-tighter text-xl">
+              ARFEEN<span className="text-indigo-500">.</span>
+            </span>
+          </a>
 
-        {/* Desktop menu */}
-        <nav className="hidden md:flex items-center text-base justify-center">
-          {['Home', 'About', 'Skills', 'Portfolio', 'Contact'].map((item, idx) => (
-            <NavLink
-              key={idx}
-              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-              className="mr-6 uppercase font-medium text-slate-200 hover:text-indigo-400 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-md p-1"
-            >
-              {item}
-            </NavLink>
-          ))}
-        </nav>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="relative text-sm uppercase tracking-widest font-medium text-slate-400 hover:text-white transition-colors group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+            <button className="bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-bold transition-all hover:scale-105 active:scale-95">
+              Hire Me
+            </button>
+          </div>
 
-        {/* Hamburger Icon for mobile */}
-        <div className="md:hidden text-slate-200 text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FiX /> : <FiMenu />}
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-white p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-gray-950/90 backdrop-blur-sm shadow-lg absolute w-full left-0 top-full flex flex-col items-center p-5 space-y-5">
-          {['Home', 'About', 'Skills', 'Portfolio', 'Contact'].map((item, idx) => (
-            <NavLink
-              key={idx}
-              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-              onClick={() => setMenuOpen(false)}
-              className="uppercase font-medium text-slate-200 hover:text-indigo-400 transition-colors duration-300"
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 z-40 bg-slate-950 transition-all duration-500 md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}>
+        <div className="flex flex-col items-center justify-center h-full gap-10">
+          {navLinks.map((link, i) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className={`text-4xl font-black uppercase tracking-tighter transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
-              {item}
-            </NavLink>
+              <span className="text-indigo-500 mr-4">0{i + 1}.</span>
+              {link.name}
+            </a>
           ))}
         </div>
-      )}
-    </header>
+      </div>
+    </nav>
   );
 };
 

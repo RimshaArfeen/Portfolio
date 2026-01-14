@@ -1,51 +1,142 @@
-import React from 'react'
+
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  Github, Linkedin, Facebook, Send, Briefcase,
+  ChevronRight, Sparkles, Menu, X, User,
+  GraduationCap, Code2, Palette, Terminal, Layers,
+  Cpu, Globe, Shield, Rocket, Laptop, Database,
+  Cloud, MonitorSmartphone, ExternalLink, Calendar, MapPin,
+  Eye, Monitor, Image as ImageIcon, ArrowRight,
+  Mail, Phone, MessageSquare, CheckCircle2,
+  Instagram, Twitter, ArrowUp, ChevronUp
+} from 'lucide-react';
+
 
 const Footer = () => {
-  return (
-    <footer className="text-indigo-600 body-font relative h-fit top-[180vh] lg:top-0 w-full bottom-0">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap md:text-left text-xl text-center order-first">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CONTACT INFO</h2>
-            <nav className="list-none mb-10">
-              <li>
-                <a href="mailto:youremail@example.com" className=" hover:text-gray-100">Email: rimshaarfeen61@gmail.com</a>
-              </li>
-              <li>
-                <a href="tel:+1234567890" className=" hover:text-gray-100">Phone: 0340-4604887</a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/in/rimsha-arfeen-b25709305/" className=" hover:text-gray-100">LinkedIn: Rimsha Arfeen</a>
-              </li>
-            </nav>
-          </div>
-          
-        </div>
-      </div>
-      <div className="bg-gray-800">
-        <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">
-            <span className="ml-3 text-xl">MERN STACK DEVELOPER</span>
-          </a>
-          <p className="text-sm text-gray-100 sm:ml-6 sm:mt-0 mt-4">© 2025 RA Creative —
-            <a href="https://twitter.com/yourhandle" rel="noopener noreferrer" className=" ml-1" target="_blank"></a>
-          </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a href="https://www.linkedin.com/in/your-profile" className="text-gray-100">
-              <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://twitter.com/yourhandle" className="ml-3 text-gray-100">
-              <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
-            </a>
-          </span>
-        </div>
-      </div>
-    </footer>
-  )
-}
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
+  const footerLinks = [
+    {
+      title: "Exploration",
+      links: [
+        { name: "About Me", href: "#about" },
+        { name: "Experience", href: "#experience" },
+        { name: "My Work", href: "#portfolio" }
+      ]
+    },
+    {
+      title: "Services",
+      links: [
+        { name: "Full Stack  development", href: "#skills" },
+        { name: "UI/UX Strategy", href: "#skills" },
+        { name: "Graphic Art", href: "#skills" }
+      ]
+    },
+    {
+      title: "Connection",
+      links: [
+        { name: "LinkedIn", href: "https://linkedin.com/in/rimsha-arfeen" },
+        { name: "GitHub", href: "https://github.com/RimshaArfeen" },
+        { name: "Contact", href: "#contact" }
+      ]
+    }
+  ];
+
+  return (
+    <footer className="relative bg-slate-950 pt-20 overflow-hidden">
+      {/* Footer Top Border */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+
+      <div className="container mx-auto px-6 lg:px-24">
+        {/* Footer Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 pb-20">
+
+          {/* Brand/Bio Column */}
+          <div className="lg:col-span-5 space-y-8">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-600/20">
+                <span className="text-white font-black text-2xl tracking-tighter">R</span>
+              </div>
+              <span className="text-2xl font-black text-white tracking-tighter uppercase">Arfeen<span className="text-indigo-500">.</span></span>
+            </div>
+
+            <p className="text-slate-400 font-light leading-relaxed max-w-sm text-sm">
+              Crafting scalable digital solutions and high-impact visual identities through a synthesis of modern engineering and intentional design.
+            </p>
+
+            <div className="flex gap-4">
+              <SocialIconBtn href="https://github.com/RimshaArfeen" icon={<Github size={18} />} />
+              <SocialIconBtn href="https://linkedin.com/in/rimsha-arfeen" icon={<Linkedin size={18} />} />
+              <SocialIconBtn href="#" icon={<Twitter size={18} />} />
+              <SocialIconBtn href="#" icon={<Instagram size={18} />} />
+            </div>
+          </div>
+
+          {/* Links Columns */}
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
+            {footerLinks.map((group, idx) => (
+              <div key={idx} className="space-y-6">
+                <h4 className="text-white text-xs font-black uppercase tracking-[0.2em]">{group.title}</h4>
+                <ul className="space-y-4">
+                  {group.links.map((link, i) => (
+                    <li key={i}>
+                      <a
+                        href={link.href}
+                        className="text-slate-500 text-sm hover:text-indigo-400 transition-all duration-300 flex items-center group/link"
+                      >
+                        <ChevronRight size={12} className="opacity-0 -ml-4 group-hover/link:opacity-100 group-hover/link:ml-0 transition-all mr-1" />
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer Bottom Bar */}
+        <div className="border-t border-slate-900 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-4">
+            <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">
+              &copy; {new Date().getFullYear()} Rimsha Arfeen
+            </p>
+            <span className="w-1 h-1 rounded-full bg-slate-800" />
+            <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">
+              Karachi, PK
+            </p>
+          </div>
+
+          <button
+            onClick={scrollToTop}
+            className="group flex items-center gap-3 text-indigo-400 hover:text-white transition-colors"
+          >
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Back to Top</span>
+            <div className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center group-hover:bg-indigo-600 group-hover:border-indigo-600 transition-all">
+              <ChevronUp size={20} />
+            </div>
+          </button>
+        </div>
+      </div>
+
+      {/* Aesthetic Accents */}
+      <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-600/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-purple-600/5 blur-[100px] rounded-full pointer-events-none" />
+    </footer>
+  );
+};
 export default Footer;
+
+
+const SocialIconBtn = ({ href, icon }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 hover:text-white hover:border-indigo-500 hover:bg-indigo-600/10 transition-all duration-300"
+  >
+    {icon}
+  </a>
+);

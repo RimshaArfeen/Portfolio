@@ -38,6 +38,11 @@ export const progressData = [
     name: "MongoDb",
     color: "bg-yellow-500"
   },
+  {
+    width: "60%",
+    name: "NextJs",
+    color: "bg-yellow-500"
+  },
    {
     width: "70%",
     name: "Tailwind / Bootstrap",

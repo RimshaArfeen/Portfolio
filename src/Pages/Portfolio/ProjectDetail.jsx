@@ -1,51 +1,87 @@
 
 
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  Github, Linkedin, Facebook, Send, Briefcase,
+  ChevronRight, Sparkles, Menu, X, User,
+  GraduationCap, Code2, Palette, Terminal, Layers,
+  Cpu, Globe, Shield, Rocket, Laptop, Database,
+  Cloud, MonitorSmartphone, ExternalLink, Calendar, MapPin,
+  Eye, Monitor, Image as ImageIcon, ArrowRight
+} from 'lucide-react';
 
-const ProjectDetail = ({ img, img2, title, description, link, close }) => {
+const ProjectDetail = ({ project, close }) => {
+  if (!project) return null;
+
   return (
-    // Modal overlay with frosted glass effect
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm z-50 p-4">
-      {/* Modal content container */}
-      <div className="relative w-full max-w-4xl p-6 md:p-8 bg-white bg-opacity-10 backdrop-filter backdrop-blur-xl border border-white border-opacity-20 rounded-2xl shadow-2xl overflow-y-auto max-h-[90vh]">
-        
+    <div className="fixed inset-0 flex items-center justify-center bg-slate-950/90 backdrop-blur-md z-[100] p-4 animate-in fade-in duration-300">
+      <div className="relative w-full max-w-5xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row animate-in zoom-in-95 duration-500">
+
         {/* Close button */}
         <button
           onClick={close}
-          className="absolute top-4 right-4 text-white text-3xl font-bold bg-red-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-700 transition-colors duration-300 z-20"
-          aria-label="Close Project Details"
+          className="absolute top-6 right-6 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full w-10 h-10 flex items-center justify-center transition-all z-20"
         >
-          &times;
+          <X size={20} />
         </button>
 
-        {/* Project image */}
-        <img
-          className="w-full h-auto mb-6 rounded-xl object-cover border-4 border-indigo-600 shadow-lg"
-          src={img2 || img}
-          alt={`Main view of the ${title} project`}
-        />
+        {/* Project Image Column */}
+        <div className="md:w-3/5 bg-slate-800 overflow-y-auto custom-scrollbar">
+          <img
+            className="w-full h-auto object-cover"
+            src={project.img2 || project.imgUrl}
+            alt={project.title}
+          />
+          {/* Potential secondary image gallery could go here */}
+        </div>
 
-        {/* Project details */}
-        <div className="text-white">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wide mb-4 border-b-2 border-indigo-400 pb-2">
-            {title}
+        {/* Project Details Column */}
+        <div className="md:w-2/5 p-8 md:p-12 overflow-y-auto flex flex-col">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-widest rounded-full">
+              {project.category} Design
+            </span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-6">
+            {project.title}<span className="text-indigo-500">.</span>
           </h2>
-          <p className="whitespace-pre-line text-lg leading-relaxed mb-6 text-gray-200">{description}</p>
-          <div className="flex justify-start items-center">
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="uppercase text-sm px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-all duration-300"
-            >
-              View Live
-            </a>
+
+          <div className="space-y-6 text-slate-400 font-light leading-relaxed mb-10">
+            <p className="whitespace-pre-line">{project.description}</p>
+          </div>
+
+          <div className="mt-auto space-y-8">
+            <div className="flex flex-wrap gap-2">
+              {project.tags?.map((tag, i) => (
+                <span key={i} className="text-xs text-slate-500 bg-slate-800 px-3 py-1 rounded-md">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all uppercase text-xs tracking-widest"
+              >
+                Launch Project <ExternalLink size={16} />
+              </a>
+              <button
+                onClick={close}
+                className="px-6 py-4 rounded-xl border border-slate-700 text-slate-400 hover:text-white hover:bg-slate-800 transition-all text-xs font-bold uppercase"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default ProjectDetail;

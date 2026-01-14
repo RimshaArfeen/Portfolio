@@ -1,101 +1,109 @@
 
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  User, GraduationCap, Code2, Palette, Terminal, Layers
+} from 'lucide-react';
 
-import React, { useState } from 'react';
-import "../../index.css"
+
+// --- 4. ABOUT SECTION ---
 const About = () => {
-  const [selectedCat, setSelectedCat] = useState("Development");
+  const [activeTab, setActiveTab] = useState("Development");
 
-  const handleSelection = (category) => {
-    setSelectedCat(category);
-  };
+  const profileData = [
+    { icon: <User className="text-indigo-400" size={20} />, label: "Name", value: "Rimsha Arfeen" },
+    { icon: <GraduationCap className="text-indigo-400" size={20} />, label: "Education", value: "CS Student" },
+    { icon: <Code2 className="text-indigo-400" size={20} />, label: "Role", value: "Full Stack Dev" },
+    { icon: <Palette className="text-indigo-400" size={20} />, label: "Specialty", value: "UI/UX Designer" },
+  ];
 
   return (
-     <section className=" section-container relative min-h-screen py-24  bg-gradient-to-t from-indigo-950/90 to-indigo-950  text-slate-200 flex items-center justify-center px-4 md:px-8 lg:px-16">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left Section: Personal Info */}
-        <div className="flex flex-col space-y-10">
-          <div className="flex flex-col">
-            <h1 className="text-4xl md:text-5xl font-extrabold uppercase text-indigo-400">
-              Who I Am
-            </h1>
-            <hr className="w-24 border-t-2 border-indigo-600 my-4" />
+    <section id="about" className="relative min-h-screen py-32 bg-slate-950 overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-600/5 rounded-full blur-[100px]" />
+
+      <div className="container mx-auto px-6 lg:px-24 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+          {/* Left: Identity Cards */}
+          <div className="lg:col-span-5 space-y-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="h-[1px] w-8 bg-indigo-500"></span>
+                <span className="text-indigo-400 text-xs font-bold uppercase tracking-[0.2em]">Bio</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Who I Am<span className="text-indigo-500">.</span></h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {profileData.map((item, idx) => (
+                <div key={idx} className="group p-6 rounded-2xl bg-slate-900/40 border border-slate-800/50 hover:border-indigo-500/50 transition-all duration-300 backdrop-blur-sm">
+                  <div className="mb-4 p-2 w-fit rounded-lg bg-slate-800/50 group-hover:bg-indigo-500/10 transition-colors">
+                    {item.icon}
+                  </div>
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">{item.label}</p>
+                  <p className="text-slate-200 font-semibold">{item.value}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <ul className="space-y-6">
-            <li className="flex items-start space-x-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800 text-xl" aria-hidden="true">
-                👤
-              </span>
-              <div>
-                <p className="text-lg text-slate-400 font-medium">Name</p>
-                <p className="text-xl font-semibold text-slate-200">Rimsha Arfeen</p>
-              </div>
-            </li>
-            <li className="flex items-start space-x-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800  " aria-hidden="true">
-                🎓
-              </span>
-              <div>
-                <p className="text-lg text-slate-400 font-medium">Education</p>
-                <p className="text-xl   font-semibold text-slate-200">Computer Science Student</p>
-              </div>
-            </li>
-            <li className="flex items-start space-x-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800 text-2xl" aria-hidden="true">
-                💻
-              </span>
-              <div>
-                <p className="text-lg text-slate-400 font-medium">Role</p>
-                <p className="text-xl md:text-2xl font-semibold text-slate-200">MERN Stack Developer</p>
-              </div>
-            </li>
-            <li className="flex items-start space-x-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-indigo-600 bg-gray-800 text-2xl" aria-hidden="true">
-                🎨
-              </span>
-              <div>
-                <p className="text-lg text-slate-400 font-medium">Specialty</p>
-                <p className="text-xl md:text-2xl font-semibold text-slate-200">Graphic Designer</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+          {/* Right: Narrative Content */}
+          <div className="lg:col-span-7 space-y-10">
+            <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-light text-slate-400 leading-tight italic">
+                "Transforming complex challenges into <span className="text-white font-medium not-italic">elegant digital narratives</span>."
+              </h3>
 
-        {/* Right Section: About Me text with category toggle */}
-        <div className="flex flex-col space-y-8 mt-12 lg:mt-0">
-          <h2 className="text-xl md:text-2xl font-light text-slate-400">
-            Transforming Ideas into Engaging Digital Experiences
-          </h2>
+              {/* Enhanced Tab Switcher */}
+              <div className="flex p-1 bg-slate-900/80 border border-slate-800 rounded-xl w-fit backdrop-blur-md">
+                {["Development", "Design"].map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`flex items-center gap-2 px-8 py-3 rounded-lg text-sm font-bold tracking-widest uppercase transition-all duration-500 ${activeTab === tab
+                      ? 'bg-indigo-600 text-white shadow-lg'
+                      : 'text-slate-500 hover:text-slate-300'
+                      }`}
+                  >
+                    {tab === "Development" ? <Terminal size={16} /> : <Layers size={16} />}
+                    {tab}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-          <div className='flex items-center space-x-6 border-b border-gray-700'>
-            <button
-              onClick={() => handleSelection("Development")}
-              className={`relative pb-3 text-xl md:text-2xl font-bold uppercase transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-t-lg px-2 ${selectedCat === "Development" ? 'text-indigo-400' : 'text-slate-400 hover:text-white'}`}
-              aria-pressed={selectedCat === "Development"}
-            >
-              Development
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-indigo-600 transition-all duration-300 ${selectedCat === "Development" ? 'w-full' : 'w-0'}`}></span>
+            {/* Tab Content with Animation */}
+            <div className="min-h-[200px] text-lg leading-relaxed text-slate-400 font-light">
+              {activeTab === "Development" ? (
+                <div className="space-y-6 animate-in fade-in slide-in-from-left-4 duration-700">
+                  <p>
+                    I am <span className="text-white font-medium underline decoration-indigo-500/50 decoration-2 underline-offset-4">Rimsha Arfeen</span>,
+                    a detail-driven <span className="text-slate-200 font-medium">Full Stack Developer</span>. My approach focuses on the intersection of high-scale performance and architectural clean-code.
+                  </p>
+                  <p>
+                    Specializing in <span className="text-indigo-400 font-medium">MongoDB, Express, React, and Node.js</span>, I build end-to-end applications with robust REST APIs.
+                    I'm currently pushing boundaries with <span className="text-white">Next.js</span> and optimizing state management using modern patterns.
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-700">
+                  <p>
+                    Design is not just how it looks, but <span className="text-white font-medium italic underline decoration-purple-500/50 decoration-2 underline-offset-4">how it feels</span>.
+                    As a Graphic Designer, I blend structural clarity with artistic expression.
+                  </p>
+                  <p>
+                    Mastering tools like <span className="text-purple-400 font-medium">Adobe Illustrator</span> and <span className="text-purple-400 font-medium">Canva</span>,
+                    I craft visual identities that command attention—from minimalist logos to complex digital illustrations that define brand voices.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <button className="group flex items-center gap-3 text-white font-bold tracking-widest uppercase text-xs">
+              <span className="w-10 h-[1px] bg-slate-700 transition-all duration-500 group-hover:w-16 group-hover:bg-indigo-500"></span>
+              Download Resume
             </button>
-            <button
-              onClick={() => handleSelection("Design")}
-              className={`relative pb-3 text-xl md:text-2xl font-bold uppercase transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-t-lg px-2 ${selectedCat === "Design" ? 'text-indigo-400' : 'text-slate-400 hover:text-white'}`}
-              aria-pressed={selectedCat === "Design"}
-            >
-              Design
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-indigo-600 transition-all duration-300 ${selectedCat === "Design" ? 'w-full' : 'w-0'}`}></span>
-            </button>
-          </div>
-
-          <div className='text-slate-300 text-lg transition-opacity duration-500'>
-            {selectedCat === "Development" ? (
-              <p className="text-justify leading-relaxed">
-                I'm <span className="font-bold text-slate-100">Rimsha Arfeen</span>, a passionate and detail-oriented <span className="font-bold text-slate-100">MERN Stack Developer</span> dedicated to creating modern, responsive, and user-focused web applications. I work extensively with <span className="font-bold text-slate-100">MongoDB, Express.js, React.js, and Node.js</span>, focusing on writing clean and reusable code, building scalable REST APIs, and creating dynamic user interfaces. I am currently expanding my knowledge in <span className="font-bold text-slate-100">Next.js</span> and have a basic understanding of <span className="font-bold text-slate-100">Redux, Python</span>, and <span className="font-bold text-slate-100">C language</span>.
-              </p>
-            ) : (
-              <p className="text-justify leading-relaxed">
-                Alongside development, I’m a creative <span className="font-bold text-slate-100">Graphic Designer</span> with hands-on experience in <span className="font-bold text-slate-100">Adobe Illustrator</span> and <span className="font-bold text-slate-100">Canva</span>. I specialize in designing compelling <span className="font-bold text-slate-100">logos, posters, digital artworks, and custom visuals</span>. I bring a strong design sense, ensuring that the end product is not only functional but also aesthetically impressive.
-              </p>
-            )}
           </div>
         </div>
       </div>
@@ -103,4 +111,5 @@ const About = () => {
   );
 };
 
-export default About;
+export default About
+
