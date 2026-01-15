@@ -1,18 +1,18 @@
 
 /////
-import echo_journal from "../../assets/Images/Portfolio/echo_journal.png"
-import ProdLandingPage from "../../assets/Images/Portfolio/ProdLandingPage.png"
-import gisp from "../../assets/Images/Portfolio/gisp.png"
-import SpicyBazaar from "../../assets/Images/Portfolio/SpicyBazaar.png"
+ import echo_journal from "../../assets/Images/echo_journal.png"
+import ProdLandingPage from "../../assets/Images/ProdLandingPage.png"
+import gisp from "../../assets/Images/gisp.png"
+import SpicyBazaar from "../../assets/Images/SpicyBazaar.png"
 
 /// Graphic Designing
-import PP from "../../assets/Images/Portfolio/pp.jpeg"
-import Calligraphy from "../../assets/Images/Portfolio/Calligraphy.jpeg"
-import Kaaba from "../../assets/Images/Portfolio/Kaaba.jpeg"
-import Illustration from "../../assets/Images/Portfolio/Illustration.jpeg"
-import Ramadan from "../../assets/Images/Portfolio/Ramadan.jpg"
-import Logo from "../../assets/Images/Portfolio/logo.jpg"
-import Poster from "../../assets/Images/Portfolio/poster.jpg"
+import PP from "../../assets/Images/pp.jpeg"
+import Calligraphy from "../../assets/Images/Calligraphy.jpeg"
+import Kaaba from "../../assets/Images/Kaaba.jpeg"
+import Illustration from "../../assets/Images/Illustration.jpeg"
+import Ramadan from "../../assets/Images/Ramadan.jpg"
+import Logo from "../../assets/Images/logo.jpg"
+import Poster from "../../assets/Images/poster.jpg"
 
 export const DATA = {
   portfolio: [

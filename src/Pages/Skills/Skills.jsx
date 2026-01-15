@@ -6,9 +6,6 @@ import {
      Cloud, MonitorSmartphone
 } from 'lucide-react';
 
-// Make separate mapping section for each services and progress and then use in the section
-
-import Resume from "../../assets/Resume.pdf"
 
 
 const Skills = () => {
