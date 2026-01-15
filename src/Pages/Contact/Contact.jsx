@@ -23,7 +23,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative py-32 bg-slate-950 overflow-hidden">
+    <section id="contact" className="relative py-32  overflow-hidden">
       <div className="container mx-auto px-6 lg:px-24">
         <div className="mb-20 space-y-4">
           <div className="flex items-center gap-2">

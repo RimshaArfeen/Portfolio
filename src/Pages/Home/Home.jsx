@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Github, Linkedin, Facebook, Send, Briefcase, ChevronRight, Sparkles } from 'lucide-react';
+import Starfield from '../../Components/Starfield';
 
 // --- 1. CUSTOM TYPING EFFECT HOOK ---
 const useTypewriter = (words, speed = 100, delay = 2000) => {
@@ -31,51 +32,6 @@ const useTypewriter = (words, speed = 100, delay = 2000) => {
 };
 
 // --- 2. INTERACTIVE STARFIELD BACKGROUND ---
-const Starfield = () => {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    let animationFrameId;
-
-    const stars = Array.from({ length: 200 }, () => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      size: Math.random() * 2,
-      velocity: Math.random() * 0.5 + 0.2,
-    }));
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#ffffff';
-      stars.forEach(star => {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fill();
-        star.y -= star.velocity;
-        if (star.y < 0) star.y = canvas.height;
-      });
-      animationFrameId = requestAnimationFrame(draw);
-    };
-
-    window.addEventListener('resize', resize);
-    resize();
-    draw();
-
-    return () => {
-      window.removeEventListener('resize', resize);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className="absolute inset-0 z-0 bg-slate-950" />;
-};
 
 // --- 3. MAIN COMPONENT ---
 const Home = () => {
@@ -123,27 +79,26 @@ const Home = () => {
           </p>
 
           <div className="flex flex-wrap gap-6">
-            <button className="group relative flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(79,70,229,0.4)]">
+            <a href="/portfolio" className="group relative flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(79,70,229,0.4)]">
               <Briefcase size={20} />
               <span>View Portfolio</span>
               <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            <button className="group flex items-center gap-2 border border-slate-700 hover:border-slate-400 bg-slate-900/40 backdrop-blur-md px-8 py-4 rounded-xl font-bold transition-all hover:bg-slate-800">
+            </a>
+            <a href="/contact" className="group flex items-center gap-2 border border-slate-700 hover:border-slate-400 bg-slate-900/40 backdrop-blur-md px-8 py-4 rounded-xl font-bold transition-all hover:bg-slate-800">
               <Send size={20} className="text-indigo-400 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
               <span>Contact Me</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Social Bar - Refined Desktop Placement */}
-      <div className="absolute right-8 bottom-8 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20">
+      <div className="absolute right-8 bottom-2 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20">
         <div className="flex flex-row md:flex-col items-center gap-8">
-          <div className="hidden md:block w-[1px] h-20 bg-gradient-to-t from-indigo-500 to-transparent"></div>
+          <div className="hidden md:block w-[1px] h-20 bg-gradient-to-t from-indigo-500      to-transparent"></div>
 
           <SocialIcon href="https://github.com/RimshaArfeen" icon={<Github size={22} />} label="GitHub" />
-          <SocialIcon href="https://linkedin.com/in/rimsha-arfeen" icon={<Linkedin size={22} />} label="LinkedIn" />
+          <SocialIcon href="https://www.linkedin.com/in/rimsha-arfeen-b25709305" icon={<Linkedin size={22} />} label="LinkedIn" />
           <SocialIcon href="#" icon={<Facebook size={22} />} label="Facebook" />
           <SocialIcon href="#" icon={<Sparkles size={22} />} label="Awards" />
 
@@ -154,7 +109,7 @@ const Home = () => {
       {/* Background Decor */}
       <div className="absolute bottom-10 left-10 hidden lg:block z-10">
         <p className="text-slate-700 text-xs font-mono tracking-widest uppercase vertical-text">
-          Est. 2024 • Developing Futures
+          Est. 2024 • Designing & Developing Ideas
         </p>
       </div>
 
@@ -163,7 +118,7 @@ const Home = () => {
           writing-mode: vertical-rl;
           text-orientation: mixed;
         }
-      `}</style> 
+      `}</style>
     </main>
   );
 };

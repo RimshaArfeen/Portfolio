@@ -11,79 +11,12 @@ import {
 import Resume from "../../assets/Resume.pdf"
 
 
-
-const ProgressBar = ({ name, width }) => (
-
-     <div className="flex flex-col w-[85%] mb-3">
-
-          <div className="w-full flex justify-between">
-
-               <span className="mb-1 uppercase leading-relaxed text-sm tracking-wide">{name}</span>
-
-               <span className="mb-1 uppercase leading-relaxed text-sm tracking-wide">{width}</span>
-
-          </div>
-
-          <div className="h-[6px] border border-[#dce1fc6b] rounded-lg overflow-hidden">
-
-               <div style={{ width }} className="h-full bg-indigo-700 rounded-lg"></div>
-
-          </div>
-
-     </div>
-
-);
-
-
-
-const ServiceItem = ({ icon, title, description }) => (
-
-     <div className="w-full lg:pr-10 mb-3 px-3 md:px-0">
-
-          <div className="flex relative pb-6">
-
-               <div className="h-full w-8 md:w-12 absolute inset-0 flex items-center justify-center">
-
-                    <div className="h-full w-1 mx-auto bg-gray-200 "></div>
-
-               </div>
-
-               <div className="flex-shrink-0 w-8 md:w-12 h-8 md:h-12 rounded-full inline-flex items-center justify-center text-white relative z-10">
-
-                    <span className="bg-black  border-2 border-indigo-600 w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center p-3 md:p-5 mt-0">
-
-                         {icon}
-
-                    </span>
-
-               </div>
-
-               <div className="flex-grow pl-4">
-
-                    <h2 className="font-medium title-font text-lg text-gray-100 mb-1 border-b-[0.5px] w-fit uppercase tracking-wider border-indigo-700">
-
-                         {title}
-
-                    </h2>
-
-                    <p className="leading-relaxed text-base text-justify">{description}</p>
-
-               </div>
-
-          </div>
-
-     </div>
-
-);
-
-
-
 const Skills = () => {
      const skills = [
-          { category: "Frontend", items: ["React.js", "Next.js", "Tailwind CSS", "TypeScript"], icon: <Laptop className="text-blue-400" /> },
-          { category: "Backend", items: ["Node.js", "Express.js", "MongoDB", "Firebase"], icon: <Database className="text-green-400" /> },
-          { category: "Design", items: ["Figma", "Adobe Illustrator", "Canva", "UI/UX"], icon: <Palette className="text-purple-400" /> },
-          { category: "Tools", items: ["Git/GitHub", "Docker", "Postman", "Vercel"], icon: <Cpu className="text-orange-400" /> },
+          { category: "Frontend", items: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap"], icon: <Laptop className="text-blue-400" /> },
+          { category: "Backend", items: ["Node.js", "Express.js", "MongoDB", "Prisma ORM"], icon: <Database className="text-green-400" /> },
+          { category: "Design", items: ["Adobe Illustrator", "Canva", "UI/UX"], icon: <Palette className="text-purple-400" /> },
+          { category: "Tools", items: ["Git/GitHub", "Postman", "Vercel"], icon: <Cpu className="text-orange-400" /> },
      ];
 
      const services = [
@@ -93,7 +26,7 @@ const Skills = () => {
      ];
 
      return (
-          <section id="skills" className="relative py-32 bg-slate-950 overflow-hidden">
+          <section id="skills" className="relative py-32 overflow-hidden">
                <div className="container mx-auto px-6 lg:px-24">
                     {/* Section Header */}
                     <div className="mb-20 space-y-4">
@@ -150,9 +83,9 @@ const Skills = () => {
                                    <div className="relative z-10">
                                         <h4 className="text-xl font-black mb-2 uppercase italic">Need a custom solution?</h4>
                                         <p className="text-indigo-100 text-sm mb-6 font-light">Let's discuss your project and turn your ideas into reality.</p>
-                                        <button className="flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-xl font-bold text-sm uppercase transition-all hover:gap-4 shadow-xl">
+                                        <a href="/contact" className=" w-fit flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-xl font-bold text-sm uppercase transition-all hover:gap-4 shadow-xl">
                                              Get In Touch <Rocket size={16} />
-                                        </button>
+                                        </a>
                                    </div>
                                    <Sparkles className="absolute -bottom-4 -right-4 w-32 h-32 opacity-10 group-hover:scale-125 transition-transform" />
                               </div>

@@ -8,11 +8,11 @@ import Skills from './Pages/Skills/Skills';
 import Experience from './Pages/Experience/Experience';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import Contact from './Pages/Contact/Contact';
-
+import Starfield from './Components/Starfield';
 function App() {
   return(
 
- <div className='bg-indigo-950'>
+    <div className='bg-slate-950'>
   <Navbar />
   <Routes>
     <Route path='/' element = {

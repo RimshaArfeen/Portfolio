@@ -67,7 +67,7 @@ Welcome to my portfolio! This repository showcases my projects, skills, and crea
 ## 📧 Contact
 
 - **Email**: rimshaarfeen61@gmail.com
-- **LinkedIn**:https://www.linkedin.com/in/rimsha-arfeen-b25709305/ 
+- **LinkedIn**:https://https://www.linkedin.com/in/rimsha-arfeen-b25709305/ 
 
 ---
 

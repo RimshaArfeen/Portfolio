@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   User, GraduationCap, Code2, Palette, Terminal, Layers
 } from 'lucide-react';
+import Starfield from '../../Components/Starfield';
 
 
 // --- 4. ABOUT SECTION ---
@@ -13,11 +14,11 @@ const About = () => {
     { icon: <User className="text-indigo-400" size={20} />, label: "Name", value: "Rimsha Arfeen" },
     { icon: <GraduationCap className="text-indigo-400" size={20} />, label: "Education", value: "CS Student" },
     { icon: <Code2 className="text-indigo-400" size={20} />, label: "Role", value: "Full Stack Dev" },
-    { icon: <Palette className="text-indigo-400" size={20} />, label: "Specialty", value: "UI/UX Designer" },
+    { icon: <Palette className="text-indigo-400" size={20} />, label: "Specialty", value: "Graphic Designer" },
   ];
 
   return (
-    <section id="about" className="relative min-h-screen py-32 bg-slate-950 overflow-hidden">
+    <section id="about" className="relative min-h-screen py-32  overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-600/5 rounded-full blur-[100px]" />
@@ -56,12 +57,12 @@ const About = () => {
               </h3>
 
               {/* Enhanced Tab Switcher */}
-              <div className="flex p-1 bg-slate-900/80 border border-slate-800 rounded-xl w-fit backdrop-blur-md">
+              <div className="w-3/4 sm:flex p-1 bg-slate-900/80 border border-slate-800 rounded-xl md:w-fit backdrop-blur-md">
                 {["Development", "Design"].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex items-center gap-2 px-8 py-3 rounded-lg text-sm font-bold tracking-widest uppercase transition-all duration-500 ${activeTab === tab
+                    className={` w-full md:w-fit flex items-center gap-2 px-8 py-3 rounded-lg text-sm font-bold tracking-widest uppercase transition-all duration-500 ${activeTab === tab
                       ? 'bg-indigo-600 text-white shadow-lg'
                       : 'text-slate-500 hover:text-slate-300'
                       }`}
@@ -82,7 +83,7 @@ const About = () => {
                     a detail-driven <span className="text-slate-200 font-medium">Full Stack Developer</span>. My approach focuses on the intersection of high-scale performance and architectural clean-code.
                   </p>
                   <p>
-                    Specializing in <span className="text-indigo-400 font-medium">MongoDB, Express, React, and Node.js</span>, I build end-to-end applications with robust REST APIs.
+                    Specializing in <span className="text-indigo-400 font-medium">Next JS, React, MongoDB, Express,  and Node.js</span>, I build end-to-end applications with robust REST APIs.
                     I'm currently pushing boundaries with <span className="text-white">Next.js</span> and optimizing state management using modern patterns.
                   </p>
                 </div>
@@ -100,10 +101,13 @@ const About = () => {
               )}
             </div>
 
-            <button className="group flex items-center gap-3 text-white font-bold tracking-widest uppercase text-xs">
-              <span className="w-10 h-[1px] bg-slate-700 transition-all duration-500 group-hover:w-16 group-hover:bg-indigo-500"></span>
-              Download Resume
-            </button>
+            <a href="/resume.pdf" download>
+              <button className="group flex items-center gap-3 text-white font-bold tracking-widest uppercase text-xs">
+                <span className="w-10 h-[1px] bg-slate-700 transition-all duration-500 group-hover:w-16 group-hover:bg-indigo-500"></span>
+                Download Resume
+              </button>
+            </a>
+
           </div>
         </div>
       </div>

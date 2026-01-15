@@ -21,23 +21,24 @@ const Footer = () => {
     {
       title: "Exploration",
       links: [
-        { name: "About Me", href: "#about" },
-        { name: "Experience", href: "#experience" },
-        { name: "My Work", href: "#portfolio" }
+        { name: "About Me", href: "/about" },
+        { name: "Experience", href: "/experience" },
+        { name: "My Work", href: "/portfolio" }
       ]
     },
     {
       title: "Services",
       links: [
-        { name: "Full Stack  development", href: "#skills" },
-        { name: "UI/UX Strategy", href: "#skills" },
-        { name: "Graphic Art", href: "#skills" }
+        { name: "Full Stack  development", href: "/skills" },
+        { name: "UI/UX Strategy", href: "/skills" },
+        { name: "Graphic Art", href: "/skills" }
       ]
     },
     {
       title: "Connection",
       links: [
-        { name: "LinkedIn", href: "https://linkedin.com/in/rimsha-arfeen" },
+        {
+          name: "LinkedIn", href: "https://www.linkedin.com/in/rimsha-arfeen-b25709305" },
         { name: "GitHub", href: "https://github.com/RimshaArfeen" },
         { name: "Contact", href: "#contact" }
       ]
@@ -68,7 +69,7 @@ const Footer = () => {
 
             <div className="flex gap-4">
               <SocialIconBtn href="https://github.com/RimshaArfeen" icon={<Github size={18} />} />
-              <SocialIconBtn href="https://linkedin.com/in/rimsha-arfeen" icon={<Linkedin size={18} />} />
+              <SocialIconBtn href="https://www.linkedin.com/in/rimsha-arfeen-b25709305" icon={<Linkedin size={18} />} />
               <SocialIconBtn href="#" icon={<Twitter size={18} />} />
               <SocialIconBtn href="#" icon={<Instagram size={18} />} />
             </div>

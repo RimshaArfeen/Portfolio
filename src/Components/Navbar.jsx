@@ -55,9 +55,9 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <button className="bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-bold transition-all hover:scale-105 active:scale-95">
+            <a href="/contact" className="bg-white/5 hover:bg-white/10 border border-white/10 text-gray-500 px-5 py-2 rounded-full text-xs uppercase tracking-widest font-bold transition-all hover:scale-105 active:scale-95">
               Hire Me
-            </button>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -79,7 +79,7 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className={`text-4xl font-black uppercase tracking-tighter transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              className={`text-4xl font-black text-white uppercase tracking-tighter transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >

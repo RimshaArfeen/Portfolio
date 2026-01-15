@@ -8,48 +8,48 @@ import {
   Eye, Monitor, Image as ImageIcon, ArrowRight
 } from 'lucide-react';
 import ProjectDetail from './ProjectDetail';
-
+import { DATA } from './Data';
 // --- MOCK DATA FOR PORTFOLIO ---
-const MOCK_DATA = {
-  portfolio: [
-    {
-      id: 1,
-      title: "AI Smart City Dashboard",
-      category: "Web",
-      imgUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
-      img2: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200",
-      description: "A comprehensive dashboard designed for the National Center of AI. Built with React and Tailwind CSS, it features real-time data visualization, automated reporting, and an interactive map of smart city sensors.\n\nKey features include:\n- Real-time IoT sensor integration\n- Predictive traffic analysis using ML\n- Fully responsive admin panel",
-      link: "#",
-      tags: ["React", "D3.js", "Tailwind", "Node.js"]
-    },
-    {
-      id: 2,
-      title: "E-Commerce Experience",
-      category: "Web",
-      imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      img2: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
-      description: "A luxury lifestyle brand e-commerce platform focusing on high-end animations and seamless checkout flows. Optimized for conversion and mobile usability.",
-      link: "#",
-      tags: ["Next.js", "Stripe", "Framer Motion"]
-    },
-    {
-      id: 3,
-      title: "Fintech App Interface",
-      category: "Web",
-      imgUrl: "https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=800",
-      img2: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
-      description: "Clean and minimal fintech dashboard focusing on accessibility and clear information hierarchy. Features dark mode by default.",
-      link: "#",
-      tags: ["TypeScript", "Chart.js", "Redux"]
-    }
-  ],
-  graphics: [
-    { id: 101, title: "Cyberpunk Branding", imgUrl: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=600" },
-    { id: 102, title: "Minimalist Logo Set", imgUrl: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=600" },
-    { id: 103, title: "Social Media Kit", imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600" },
-    { id: 104, title: "Package Design", imgUrl: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6?auto=format&fit=crop&q=80&w=600" }
-  ]
-};
+// const MOCK_DATA = {
+//   portfolio: [
+//     {
+//       id: 1,
+//       title: "AI Smart City Dashboard",
+//       category: "Web",
+//       imgUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+//       img2: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1200",
+//       description: "A comprehensive dashboard designed for the National Center of AI. Built with React and Tailwind CSS, it features real-time data visualization, automated reporting, and an interactive map of smart city sensors.\n\nKey features include:\n- Real-time IoT sensor integration\n- Predictive traffic analysis using ML\n- Fully responsive admin panel",
+//       link: "#",
+//       tags: ["React", "D3.js", "Tailwind", "Node.js"]
+//     },
+//     {
+//       id: 2,
+//       title: "E-Commerce Experience",
+//       category: "Web",
+//       imgUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+//       img2: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+//       description: "A luxury lifestyle brand e-commerce platform focusing on high-end animations and seamless checkout flows. Optimized for conversion and mobile usability.",
+//       link: "#",
+//       tags: ["Next.js", "Stripe", "Framer Motion"]
+//     },
+//     {
+//       id: 3,
+//       title: "Fintech App Interface",
+//       category: "Web",
+//       imgUrl: "https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=800",
+//       img2: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200",
+//       description: "Clean and minimal fintech dashboard focusing on accessibility and clear information hierarchy. Features dark mode by default.",
+//       link: "#",
+//       tags: ["TypeScript", "Chart.js", "Redux"]
+//     }
+//   ],
+//   graphics: [
+//     { id: 101, title: "Cyberpunk Branding", imgUrl: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=600" },
+//     { id: 102, title: "Minimalist Logo Set", imgUrl: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=600" },
+//     { id: 103, title: "Social Media Kit", imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600" },
+//     { id: 104, title: "Package Design", imgUrl: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6?auto=format&fit=crop&q=80&w=600" }
+//   ]
+// };
 
 
 const Portfolio = () => {
@@ -57,7 +57,7 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("Web");
 
   return (
-    <section id="portfolio" className="relative py-32 bg-slate-950 overflow-hidden">
+    <section id="portfolio" className="relative py-32  overflow-hidden">
       <div className="container mx-auto px-6 lg:px-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div className="space-y-4">
@@ -92,7 +92,7 @@ const Portfolio = () => {
         {/* Web Projects Grid */}
         {selectedCategory === "Web" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {MOCK_DATA.portfolio.map((item) => (
+            {DATA.portfolio.map((item) => (
               <div
                 key={item.id}
                 className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer"
@@ -130,7 +130,7 @@ const Portfolio = () => {
         ) : (
           /* Graphic Design Grid */
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {MOCK_DATA.graphics.map((item) => (
+            {DATA.graphics.map((item) => (
               <div
                 key={item.id}
                 className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-900"

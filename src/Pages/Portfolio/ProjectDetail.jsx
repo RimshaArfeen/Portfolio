@@ -1,12 +1,7 @@
 
-
 import React, { useState, useEffect, useRef } from 'react';
-import {
-  Github, Linkedin, Facebook, Send, Briefcase,
-  ChevronRight, Sparkles, Menu, X, User,
-  GraduationCap, Code2, Palette, Terminal, Layers,
-  Cpu, Globe, Shield, Rocket, Laptop, Database,
-  Cloud, MonitorSmartphone, ExternalLink, Calendar, MapPin,
+import "../../index.css"
+import { X, ExternalLink, Calendar, MapPin,
   Eye, Monitor, Image as ImageIcon, ArrowRight
 } from 'lucide-react';
 
@@ -15,7 +10,7 @@ const ProjectDetail = ({ project, close }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-slate-950/90 backdrop-blur-md z-[100] p-4 animate-in fade-in duration-300">
-      <div className="relative w-full max-w-5xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row animate-in zoom-in-95 duration-500">
+      <div className="relative w-full max-w-5xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row animate-in zoom-in-95 duration-500 scrollbar-colored ">
 
         {/* Close button */}
         <button
@@ -26,7 +21,7 @@ const ProjectDetail = ({ project, close }) => {
         </button>
 
         {/* Project Image Column */}
-        <div className="md:w-3/5 bg-slate-800 overflow-y-auto custom-scrollbar">
+        <div className="md:w-3/5 bg-slate-800 overflow-y-auto scrollbar-colored">
           <img
             className="w-full h-auto object-cover"
             src={project.img2 || project.imgUrl}

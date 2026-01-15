@@ -25,7 +25,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="relative py-32 bg-slate-950 overflow-hidden">
+    <section id="experience" className="relative py-32  overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent opacity-50" />
