@@ -17,16 +17,16 @@
 }
 
 .scrollbar-colored::-webkit-scrollbar-track {
-  background: #4B2E2E; /* light red */
+  background: #020616; /* light red */
   border-radius: 10px;
 }
 
 .scrollbar-colored::-webkit-scrollbar-thumb {
-  background-color: #A32412; /* red-600 */
+  background-color: #0f172a; /* red-600 */
   border-radius: 10px;
-  border: 2px solid #4B2E2E;
+  border: 2px solid #020616;
 }
 
 .scrollbar-colored::-webkit-scrollbar-thumb:hover {
-  background-color: #A32412; /* red-700 */
+  background-color: #0f172a; /* red-700 */
 }
