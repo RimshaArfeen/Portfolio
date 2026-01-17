@@ -2,7 +2,7 @@
 /////
  import echo_journal from "../../assets/Images/echo_journal.png"
 import ProdLandingPage from "../../assets/Images/ProdLandingPage.png"
-import gisp from "../../assets/Images/gisp.png"
+import scholarshipApplicationSys from "../../assets/Images/scholarshipApplicationSys.png"
 import SpicyBazaar from "../../assets/Images/SpicyBazaar.png"
 
 /// Graphic Designing
@@ -29,17 +29,6 @@ export const DATA = {
     },
     {
       id: 2,
-      title: "Scholarship Management System",
-      category: "Web",
-      imgUrl: gisp,
-      img2: gisp,
-      link: "#",
-      description:
-        "A full-stack system for managing international IT scholarships.\n\nFeatures:\n- Student eligibility validation\n- University-first & faculty-first selection\n- Admin dashboard & JWT authentication",
-      tags: ["React", "Node.js", "Express", "MongoDB"]
-    },
-    {
-      id: 3,
       title: "SpicyBazaar | E-Commerce Platform",
       category: "Web",
       imgUrl: SpicyBazaar,
@@ -49,6 +38,18 @@ export const DATA = {
         "A modern food delivery e-commerce platform with real-time features.\n\nIncludes:\n- Auth & profiles\n- Cart & checkout\n- Order tracking\n- Admin & vendor dashboards",
       tags: ["Next.js", "Tailwind", "Prisma", "MongoDB"]
     },
+    {
+      id: 3,
+      title: "Scholarship Management System",
+      category: "Web",
+      imgUrl: scholarshipApplicationSys,
+      img2: scholarshipApplicationSys,
+      link: "#",
+      description:
+        "A full-stack system for managing international IT scholarships.\n\nFeatures:\n- Student eligibility validation\n- University-first & faculty-first selection\n- Admin dashboard & JWT authentication",
+      tags: ["React", "Node.js", "Express", "MongoDB"]
+    },
+   
     {
       id: 4,
       title: "Nesta Coffee",
@@ -138,7 +139,7 @@ export const DATA = {
 //   },
 //   {
 //     title: "Scholarship Management System",
-//     imgUrl: gisp,
+//     imgUrl: scholarshipApplicationSys,
 //     link: "#",
 //     description: "The Abroad Scholarship Management System is a FULL-STACK web application designed to streamline the process of applying for international IT scholarships. Built using the Full Stack (MongoDB, Express.js, React, and Node.js), this system allows students to submit their applications and academic records for evaluation.\nFUNCTIONS:\n ----------\n STUDENT APPLICATION FORM: Collects personal and academic details, validates eligibility (≥85% marks, age ≥19).\n\nSELECTION OPTIONS:\n----------\n  University-first: Faculty assigned based on chosen university and academic record.\n  Faculty-first: Checks available seats for chosen faculty across universities.\n\nDatabase Management: Stores applications, updates seat availability dynamically.\n\nAuthentication: Secure admin login with JWT, protected routes for data management.\n\nAdmin Dashboard: View, filter, and manage applications; monitor seat availability.\n\nPages\nHome – Overview of scholarships.\nApply – Scholarship application form.\nAdmin Dashboard – Manage applications, view seat availability.\nLogin – Admin authentication page.\n\nTech Stack\nFrontend: React.js, Tailwind CSS\nBackend: Node.js, Express.js\nDatabase: MongoDB (Mongoose)\nAuth: JWT"
 
